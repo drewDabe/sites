@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (charIndex < text[lineIndex].length) {
                 introText.textContent += text[lineIndex][charIndex];
                 charIndex++;
-                setTimeout(typeLine, 100);
+                setTimeout(typeLine, 50);
             } else {
                 introText.textContent += '\n';
                 charIndex = 0;
