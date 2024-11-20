@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const lines = introText.textContent.split('\n');
         const currentLine = lines[lines.length - 1];
         const rect = introText.getBoundingClientRect();
-        typingCursor.style.left = `${rect.left + window.scrollX + currentLine.length * 11 + 35}px`;
+        typingCursor.style.left = `${rect.left + window.scrollX + currentLine.length * 10.8 + 35}px`;
         typingCursor.style.top = `${rect.top + window.scrollY + (lines.length - 1) * 24 + 36}px`;
     }
     
