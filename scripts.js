@@ -6,6 +6,7 @@ document.querySelectorAll('.thumbnail').forEach(thumbnail => {
 
 document.addEventListener('DOMContentLoaded', function() {
     const introText = document.getElementById('intro-text');
+    const catContainer = document.getElementById('cat-container');
     const catFrame1 = document.getElementById('cat-frame1');
     const catFrame2 = document.getElementById('cat-frame2');
     const container = document.querySelector('.container');
@@ -32,6 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 introText.textContent += '\n';
                 charIndex = 0;
                 lineIndex++;
+                if (lineIndex === 1) {
+                    catContainer.style.display = 'block';
+                    animateCat();
+                }
                 setTimeout(typeLine, 1000);
             }
         } else {
@@ -39,9 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 introScreen.style.opacity = 0;
                 setTimeout(() => {
                     introScreen.style.display = 'none';
-                    container.style.display = 'flex';
                 }, 1000);
-            }, 4000);
+            }, 3000);
         }
     }
     
@@ -58,5 +62,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     typeLine();
-    animateCat();
 });
