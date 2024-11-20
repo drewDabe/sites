@@ -6,6 +6,7 @@ document.querySelectorAll('.thumbnail').forEach(thumbnail => {
 
 document.addEventListener('DOMContentLoaded', function() {
     const introText = document.getElementById('intro-text');
+    const typingCursor = document.getElementById('typing-cursor');
     const catContainer = document.getElementById('cat-container');
     const catFrame1 = document.getElementById('cat-frame1');
     const catFrame2 = document.getElementById('cat-frame2');
@@ -47,6 +48,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 1000);
             }, 3000);
         }
+        updateCursor();
+    }
+    
+    function updateCursor() {
+        typingCursor.style.left = `${introText.offsetWidth}px`;
+        typingCursor.style.top = `${introText.offsetHeight - 20}px`;
     }
     
     function animateCat() {
