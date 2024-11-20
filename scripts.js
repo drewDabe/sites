@@ -35,8 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 charIndex = 0;
                 lineIndex++;
                 if (lineIndex === 1) {
-                    catContainer.style.display = 'block';
-                    animateCat();
+                    setTimeout(() => {
+                        catContainer.style.display = 'block';
+                        animateCat();
+                    }, 500);
                 }
                 setTimeout(typeLine, 1000);
             }
