@@ -13,7 +13,7 @@ body, html {
 .iframe-container {
     flex: 1;
     height: 100%;
-    transition: flex 0.5s ease;
+    transition: flex 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
     overflow: hidden;
 }
 
