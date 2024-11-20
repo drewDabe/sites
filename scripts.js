@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateCursor() {
         const lines = introText.textContent.split('\n');
         const currentLine = lines[lines.length - 1];
-        typingCursor.style.left = `${currentLine.length * 0.6}em`;
-        typingCursor.style.top = `${(lines.length - 1) * 1.5}em`;
+        typingCursor.style.left = `${introText.offsetLeft + currentLine.length * 0.6}em`;
+        typingCursor.style.top = `${introText.offsetTop + (lines.length - 1) * 1.5}em`;
     }
     
     function animateCat() {
