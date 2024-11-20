@@ -8,7 +8,7 @@ body, html {
 #intro-screen {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     background-color: teal;
     color: white;
@@ -25,11 +25,13 @@ body, html {
 
 #intro-text {
     margin-bottom: 0;
+    position: relative;
 }
 
 #typing-cursor {
     display: inline-block;
     animation: blink 1s step-end infinite;
+    position: absolute;
 }
 
 @keyframes blink {
@@ -43,7 +45,7 @@ body, html {
 
 #cat-container {
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 45%;
     transform: translateX(-50%);
 }

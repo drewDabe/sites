@@ -52,8 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function updateCursor() {
-        typingCursor.style.left = `${introText.offsetWidth}px`;
-        typingCursor.style.top = `${introText.offsetHeight - 20}px`;
+        const lines = introText.textContent.split('\n');
+        const currentLine = lines[lines.length - 1];
+        typingCursor.style.left = `${currentLine.length * 0.6}em`;
+        typingCursor.style.top = `${(lines.length - 1) * 1.5}em`;
     }
     
     function animateCat() {
