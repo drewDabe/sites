@@ -57,8 +57,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const lines = introText.textContent.split('\n');
         const currentLine = lines[lines.length - 1];
         const rect = introText.getBoundingClientRect();
-        typingCursor.style.left = `${rect.left + window.scrollX + currentLine.length * 0.6}em`;
-        typingCursor.style.top = `${rect.top + window.scrollY + (lines.length - 1) * 1.5}em`;
+        typingCursor.style.left = `${rect.left + window.scrollX + currentLine.length * 10}px`;
+        typingCursor.style.top = `${rect.top + window.scrollY + (lines.length - 1) * 24}px`;
     }
     
     function animateCat() {
